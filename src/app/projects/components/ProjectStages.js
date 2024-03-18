@@ -1,8 +1,10 @@
 'use client'
 
 import React from "react";
+import RadialBarChart from "./RadialBarChart";
 
 export default function ProjectStages() {
+  const data = [50.45];
 
   return (
     <div className="mt-6 flex-grow pl-[60px] pt-[23px] pr-[60px] pb-[50px] rounded-[30px] bg-[#18182b]">
@@ -11,7 +13,14 @@ export default function ProjectStages() {
       </h1>
 
       <div className="flex gap-20 mt-10 pt-[52px] px-[50px] pb-[37px] bg-[#212137] rounded-[30px]">
-        <div className="flex justify-center items-center w-[200px]">
+        <div className="flex flex-col  w-[200px]">
+          {/* RadialBar Chart */}
+          <RadialBarChart data={data} />
+
+          <div className="text-center">
+            <p className="text-sm text-[#7787B1] mb-1">Ended</p>
+            <p>May 30, 2023</p>
+          </div>
 
         </div>
         <div className="flex-grow">

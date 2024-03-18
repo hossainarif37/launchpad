@@ -25,9 +25,9 @@ const TokenomicsChart = ({ data }) => {
             show: false
         },
         stroke: {
-            show: true, // Show the stroke
-            width: 4, // Set the stroke width to create a gap
-            colors: ['#18182B'] // Set the stroke color to match the background color or any other color
+            show: true,
+            width: 4,
+            colors: ['#18182B']
         },
         plotOptions: {
             pie: {
@@ -37,7 +37,7 @@ const TokenomicsChart = ({ data }) => {
             }
         },
         tooltip: {
-            theme: 'dark', // This sets the tooltip background color to dark. You can also use 'light' or custom CSS classes.
+            theme: 'dark',
             custom: function ({ seriesIndex, dataPointIndex, w }) {
                 // Access the series data for the hovered pie slice
                 const seriesData = w.config.series[seriesIndex];
