@@ -22,12 +22,12 @@ export default function Projects() {
         <div className="flex items-center">
           {items.map((item, index) => (
             <button
+              key={index}
               onClick={() => setActiveItem(item)}
-              className={`font-semibold text-[15px] leading-[44px] font-[Prompt] px-[17px] ${
-                activeItem === item
+              className={`font-semibold text-[15px] leading-[44px] font-[Prompt] px-[17px] ${activeItem === item
                   ? " rounded-[12px] bg-[#4c54f5]"
                   : "text-[#c1cef1b3] cursor-pointer hover:bg-[#FFFFFF14]"
-              } `}
+                } `}
             >
               {item}
             </button>

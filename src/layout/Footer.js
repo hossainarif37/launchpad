@@ -36,7 +36,9 @@ export default function Footer() {
           <div className="flex flex-col">
             <div className="flex max-w-[420px] flex-wrap justify-end gap-[25px]">
               {footerLinks.slice(0, 3).map((item, index) => (
-                <div className="flex gap-1 whitespace-nowrap text-[#fd4f6e] font-medium">
+                <div
+                  key={index}
+                  className="flex gap-1 whitespace-nowrap text-[#fd4f6e] font-medium">
                   {item.title}{" "}
                   {item.href && (
                     <Image
@@ -51,7 +53,9 @@ export default function Footer() {
             </div>
             <div className=" mt-2 flex max-w-[520px] flex-wrap justify-end gap-[25px]">
               {footerLinks.slice(3, 6).map((item, index) => (
-                <div className="flex gap-1 whitespace-nowrap text-[#fd4f6e] font-medium">
+                <div
+                  key={index}
+                  className="flex gap-1 whitespace-nowrap text-[#fd4f6e] font-medium">
                   {item.title}{" "}
                   {item.href && (
                     <Image

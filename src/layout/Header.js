@@ -14,7 +14,9 @@ export default function Header() {
           </div>
           <div className="flex ml-20 mr-10">
             {menu.map((item, index) => (
-              <div className="py-1.5 px-4 cursor-pointer font-medium font-[Prompt] hover:bg-white hover:bg-opacity-10">
+              <div
+                key={index}
+                className="py-1.5 px-4 cursor-pointer font-medium font-[Prompt] hover:bg-white hover:bg-opacity-10">
                 <Link href={item.href}>{item.title}</Link>
               </div>
             ))}
