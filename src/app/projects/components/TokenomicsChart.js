@@ -45,10 +45,16 @@ const TokenomicsChart = ({ data }) => {
                 // Custom content function
                 const customContent = `<div class="bg-gray-800 bg-opacity-5 text-white p-4 rounded-lg">
                 <div class="font-bold mb-2 flex flex-1 justify-between gap-5">
-                    <span>${w.config.labels[seriesIndex]}</span>
-                    <span>${seriesData.toFixed(2)}%</span>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-4 h-4 block rounded-full border-8 border-[#ff5200] border-opacity-40 relative">
+                            <div class="w-2 h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff5200]"></div>
+                        </div>
+
+                        <span>${w.config.labels[seriesIndex]}</span>
+                    </div>
+                    <span>${seriesData.toFixed(1)}%</span>
                 </div>
-                <div>${values[seriesIndex]}</div>
+                <div class="ml-7">${values[seriesIndex]}</div>
             </div>`;
                 return customContent;
             }
