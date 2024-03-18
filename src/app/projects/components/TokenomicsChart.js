@@ -1,6 +1,7 @@
 // TokenomicsChart.js
 import dynamic from 'next/dynamic';
 import React from 'react';
+import { hexToRGBA } from "../../../utlils/hexToRGBA"
 
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
@@ -43,20 +44,20 @@ const TokenomicsChart = ({ data }) => {
                 const seriesData = w.config.series[seriesIndex];
                 const colorsData = w.config.colors[seriesIndex];
 
-                // Custom content function
+                // Assuming colors is defined and accessible in this scope
                 const customContent = `<div class="bg-gray-800 bg-opacity-10 text-white p-4 rounded-lg">
-                <div class="font-bold mb-2 flex flex-1 justify-between gap-5">
-                    <div class="flex items-center gap-x-3">
-                        <div class="w-4 h-4 block rounded-full border-8 border-[#ff5200] border-opacity-40 relative">
-                            <div class="w-2 h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff5200]"></div>
-                        </div>
+<div class="font-bold mb-2 flex flex-1 justify-between gap-5">
+    <div class="flex items-center gap-x-3">
+        <div class="w-4 h-4 block rounded-full border-8 relative" style="border-color: ${hexToRGBA(colors[seriesIndex], 40)};">
+            <div class="w-2 h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full" style="background-color: ${colors[seriesIndex]};"></div>
+        </div>
 
-                        <span>${w.config.labels[seriesIndex]}</span>
-                    </div>
-                    <span>${seriesData.toFixed(1)}%</span>
-                </div>
-                <div class="ml-7">${values[seriesIndex]}</div>
-            </div>`;
+        <span>${w.config.labels[seriesIndex]}</span>
+    </div>
+    <span>${seriesData.toFixed(1)}%</span>
+</div>
+<div class="ml-7">${values[seriesIndex]}</div>
+</div>`;
                 return customContent;
             }
         },
