@@ -24,11 +24,11 @@ export default function Page() {
             <MainCard />
             <ProjectStages />
             <TokenUtilities />
+            <Tokenomics />
             <ProjectDetails />
             <KeyFeatures />
             <MeetTheTeam />
             <Community />
-            <Tokenomics />
             <ProjectRoadmap />
           </div>
           <Sticky />

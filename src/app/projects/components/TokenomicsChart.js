@@ -43,7 +43,7 @@ const TokenomicsChart = ({ data }) => {
                 const seriesData = w.config.series[seriesIndex];
 
                 // Custom content function
-                const customContent = `<div class="bg-gray-800 bg-opacity-5 text-white p-4 rounded-lg">
+                const customContent = `<div class="bg-gray-800 bg-opacity-10 text-white p-4 rounded-lg">
                 <div class="font-bold mb-2 flex flex-1 justify-between gap-5">
                     <div class="flex items-center gap-x-3">
                         <div class="w-4 h-4 block rounded-full border-8 border-[#ff5200] border-opacity-40 relative">
