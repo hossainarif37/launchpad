@@ -41,6 +41,7 @@ const TokenomicsChart = ({ data }) => {
             custom: function ({ seriesIndex, dataPointIndex, w }) {
                 // Access the series data for the hovered pie slice
                 const seriesData = w.config.series[seriesIndex];
+                const colorsData = w.config.colors[seriesIndex];
 
                 // Custom content function
                 const customContent = `<div class="bg-gray-800 bg-opacity-10 text-white p-4 rounded-lg">

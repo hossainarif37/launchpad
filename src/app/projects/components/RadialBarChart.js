@@ -11,7 +11,6 @@ const RadialBarChart = ({ data }) => {
             type: "radialBar"
         },
 
-        series: [67],
 
         plotOptions: {
             radialBar: {
@@ -20,13 +19,18 @@ const RadialBarChart = ({ data }) => {
                     size: "65%"
                 },
 
+                track: {
+                    background: '#24243D'
+                },
+
                 dataLabels: {
                     showOn: "always",
                     name: {
                         offsetY: 30,
                         show: true,
                         color: "#7787B1",
-                        fontSize: "13px"
+                        fontSize: "14px",
+                        fontFamily: "Mulish",
                     },
                     value: {
                         color: "#ffffff",
@@ -44,9 +48,10 @@ const RadialBarChart = ({ data }) => {
         },
         labels: ["Submitted"],
         fill: {
-            colors: ['#37C7B6', 'tomato'],
-            type: 'Solid'
-        }
+            colors: ['#37C7B6'],
+            type: 'solid'
+        },
+
     };
 
     return (
