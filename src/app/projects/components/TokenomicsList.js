@@ -2,7 +2,6 @@
 const TokenomicsList = ({ item, total, color }) => {
     // Convert the values to percentages
     const percentage = parseFloat(item.value.replace(/,/g, '')) / total * 100;
-    console.log(color);
 
     const hexToRGBA = (hex, opacity) => {
         switch (opacity) {
